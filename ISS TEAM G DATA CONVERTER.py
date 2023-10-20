@@ -24,16 +24,14 @@ def read_and_write_text_files(input_prefix, output_filename, num_files):
 
 src = "C:\\Users\\ak4xb\\OneDrive\\Documents\\vscode projects\\python\\iss 2022-20223 team G text file\\data\\PO00001.TXT"
 f = open(src, "r")
-
-
-lines = [4, 7, 8, 16, 17, 18, 19]
-
-print(linecache.getline(src, 4)[19:len(linecache.getline(src, 4))]) # mission clock
-print(linecache.getline(src, 7)[22:len(linecache.getline(src, 7))]) # ambient temp
-print(linecache.getline(src, 8)[19:len(linecache.getline(src, 8))]) # ambient humidity
-print(linecache.getline(src, 16)[7:len(linecache.getline(src, 16))]) # CO2-1       
-print(linecache.getline(src, 17)[7:len(linecache.getline(src, 17))]) # CO2-2
-print(linecache.getline(src, 18)[8:len(linecache.getline(src, 18))]) # Temp-1
-print(linecache.getline(src, 19)[8:len(linecache.getline(src, 19))]) # Temp-2      
+def lineCache(directory, lineNum):
+    linecache.getline(directory, lineNum)
+print( linecache(src, 4) [19:len(linecache(src, 4))] ) # mission clock
+print( linecache(src, 7) [22:len(linecache(src, 7))] ) # ambient temp
+print( linecache(src, 8) [19:len(linecache(src, 8))] ) # ambient humidity
+print( linecache(src, 16) [7:len(linecache(src, 16))] ) # CO2-1       
+print( linecache(src, 17) [7:len(linecache(src, 17))] ) # CO2-2
+print( linecache(src, 18) [8:len(linecache(src, 18))] ) # Temp-1
+print( linecache(src, 19) [8:len(linecache(src, 19))] ) # Temp-2      
 
 read_and_write_text_files("PO0000", "output.txt", 3)
